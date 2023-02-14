@@ -14,5 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'Pagina principal';
+});
+
+Route::get('/', [PrimerControlador::class, 'arrel']);
+Route::get('/hola', [PrimerControlador::class, 'hola']);
+
+Route::get('/ej1/controladorEjercicio1', function(){
+    return 'ej1Parametro';
 });
