@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Contollers\PrimerControlador;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,13 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return 'Pagina principal';
-});
-
-Route::get('/', [PrimerControlador::class, 'arrel']);
-Route::get('/hola', [PrimerControlador::class, 'hola']);
-
-Route::get('/ej1/controladorEjercicio1', function(){
-    return 'ej1Parametro';
-});
+Route::get('/hola/{persona?}','PrimerControlador@hola');
