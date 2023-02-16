@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Contollers\PrimerControlador;
+use App\Http\Controllers\PrimerControlador;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +14,8 @@ use App\Http\Contollers\PrimerControlador;
 |
 */
 
-Route::get('/hola/{persona?}','PrimerControlador@hola');
+Route::get('/', [PrimerControlador::class, 'arrel']);
+Route::get('/hola/{persona?}', [PrimerControlador::class, 'hola']);
+//***************MÁS DE UN METODO******************* */
+Route::get('/ej1/{controladorEjercicio1?}', 'App\Http\Controllers\PrimerControlador@ej1Parametro');
+Route::get('/parametros/{param1}/{param2}/{param3}', 'App\Http\Controllers\PrimerControlador@pruebaParametros');
