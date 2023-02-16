@@ -18,12 +18,6 @@ class PrimerControlador extends Controller
         $textoFinal .= ($persona = '')? 'mundo':$persona;
         return view('mensaje')->with(['text' => $textoFinal]);
     }
-    public function ej1Parametro($controladorEjercicio1 = '')
-    {
-        $textoFinal = 'Ej1, ';
-        $textoFinal .= ($controladorEjercicio1 == '') ? 'hola Roger' : $controladorEjercicio1;
-        return view('mensaje')->with(['texto' => $textoFinal]);
-    }
     public function pruebaParametros($param1, $param2, $param3)
     {
         $textoFinal = 'El primer parámetro és igual a ' . $param1 . '. ';
