@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PrimerControlador;
+use App\Http\Controllers\controladorEjercicio1;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +16,15 @@ use App\Http\Controllers\PrimerControlador;
 |
 */
 
+//***************POWER 0******************* */
 Route::get('/', [PrimerControlador::class, 'arrel']);
 Route::get('/hola/{persona?}', [PrimerControlador::class, 'hola']);
-//***************MÁS DE UN METODO******************* */
-Route::get('/ej1/{controladorEjercicio1?}', 'App\Http\Controllers\controladorEjercicio1@ej1Parametro');
 Route::get('/parametros/{param1}/{param2}/{param3}', 'App\Http\Controllers\PrimerControlador@pruebaParametros');
+//***************PRACTICA 11******************* */
+Route::get('/ej1', [controladorEjercicio1::class, 'ej1']);
+Route::get('/ej2/{menajeEj2}', [controladorEjercicio1::class, 'ej2']);
+Route::get('/ej3/primeraView', [controladorEjercicio1::class, 'ej3']);
+Route::get('/parametros/{param1}/{param2}/{param3}/{param4}',  [controladorEjercicio1::class, 'cuatroParametros']);
+
+
+
