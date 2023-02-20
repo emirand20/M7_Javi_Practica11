@@ -1,7 +1,7 @@
 <?php
-use Illuminate\Routing\Route;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\ControladorAdmin;
 
-/**Routes de l'administrador */
-Route::prefix('adb')->group(function(){
+Route::group(['middlaware' => ['adb']](function(){
     Route::get('articulos', [ControladorAdmin::class,'articulos']);
-});
+}));
