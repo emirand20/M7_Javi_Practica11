@@ -10,7 +10,7 @@ class controladorEjercicio1 extends Controller
     }
     public function ej2($mensajeEj2)
     {
-        return 'Éste es el resultado del primer ejercicio de la práctica hecha por <3 ' . $mensajeEj2;
+        return $mensajeEj2;
     }
     public function ej3()
     {
